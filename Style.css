@@ -6,7 +6,7 @@
   font-weight: 400;
   font-style: normal;
 }
-
+/* Header-Section */
 #header {
   height: 72vh;
 }
@@ -149,7 +149,7 @@
 }
 .slide-1-text .text {
   font-size: 2rem;
-  color: rgb(86, 86, 86);;
+  color: rgb(86, 86, 86);
   font-family: "Brygada 1918", serif;
   font-optical-sizing: auto;
   font-weight: 400;
