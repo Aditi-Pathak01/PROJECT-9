@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#header {
+  height: 72vh;
+}
+.nav-bar {
+  height: 85px;
+  box-shadow: 1px 1px 5px 2px rgb(225, 219, 219);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  margin-bottom: 0.8rem;
+}
+.nav-bar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-bar ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: rgb(78, 76, 76);
+}
+.nav-links-left .logo {
+  width: 70px;
+  margin-right: 1rem;
+}
+.logo img {
+  width: 100%;
+}
+.nav-bar sup {
+  color: deeppink;
+  font-weight: light;
+  font-size: 0.6rem;
+  margin-left: 0.3rem;
+}
+.nav-bar input {
+  height: 38px;
+  width: 450px;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+  margin-left: 3rem;
+}
+.nav-bar input::placeholder {
+  color: grey;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+.nav-bar input:active {
+  background-color: white;
+}
+.nav-links-right {
+  margin-left: 2rem;
+}
+.nav-links-right ul li {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.nav-links-right li i {
+  font-size: 1rem;
+}
+.nav-links-right li  p {
+  font-size: 0.6rem;
+  width: 30px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+/* Carousal */
+.c-container {
+  padding: 1.1rem;
+  padding-left: 0;
+}
+.slider-wrapper {
+  height: 53vh;
+  width: 100%;
+  position: relative;
+}
+.slider {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  height: 100%;
+  width: 100%;
+}
+#slide-1,#slide-2,#slide-3,#slide-4,#slide-5,#slide-6,#slide-7 {
+  display: flex;
+  gap: 2.3rem;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+}
+.slide-1-img,.slide-4-img,.slide-3-img,.slide-5-img {
+  flex-basis: 70%;
+  padding: 1rem;
+  padding-left: 0;
+}
+.slide-1-img img,.slide-4-img img,.slide-3-img img,.slide-5-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide-1-text,.slide-2-text {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo-1,.logo-2 {
+  width: 90px;
+  border: 1px solid rgb(197, 195, 195);
+  padding: 2px 20px;
+}
+.logo-1 img,.logo-2 img {
+  aspect-ratio: 1.1/1;
+  object-fit: contain;
+}
+.logo p {
+  color: rgb(161, 158, 158);
+  font-size: 2rem;
+  font-style: italic;
+  font-family: popping;
+}
+.slide-1-text .text {
+  font-size: 2rem;
+  color: rgb(86, 86, 86);;
+  font-family: "Brygada 1918", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+}
+.slide-1-text .line,.slide-2-text .line {
+  height: 1px;
+  width: 80%;
+  margin-top: 2rem;
+  background-color: rgb(214, 210, 210);
+}
+.slide-1-text a,.slide-2-text a {
+  text-decoration: none;
+  color: rgb(159, 154, 154);
+  font-family: arial;
+  font-size: 14px;
+}
+.slide-2-text .tops {
+  font-size: 2.3rem;
+  font-family: popping;
+  font-weight: lighter;
+  margin-bottom: 0.9rem;
+}
+.slide-2-text .rate {
+  font-size: 1.4rem;
+  color: grey;
+  font-family: popping;
+}
+.slide-4-img,.slide-3-img,.slide-5-img {
+  position: relative;
+}
+.brand-logo {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  width: 90px;
+  height: 50px;
+  opacity: 0.6;
+}
+.brand-logo img {
+  width: 100%;
+  object-fit: cover;
+}
+/* side-nav */
+#slide-nav,#slide-nav-b {
+  position: absolute;
+  bottom: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  gap: 0.9rem;
+}
+#slide-nav a,#slide-nav-b a {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: rgb(180, 175, 175);
+  opacity: 0.65;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+#slide-nav a:hover,#slide-nav-b a:hover {
+  opacity: 1;
+  background-color: rgb(58, 57, 57);
+}
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+/*-----Brand-section----- */
+#brand-sec {
+  margin: 3rem 0;
+}
+#brand-sec h1 {
+  font-size: 1.65rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-style: arial;
+  font-weight: bolder;
+  color: rgb(81, 79, 79);
+  margin-bottom: 4.5rem;
+  margin-left: 2rem;
+}
+.slider-wrapper-b {
+  height: 280px;
+  width: 100%;
+  position: relative;
+}
+.slider-b {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  height: 100%;
+  width: 100%;
+}
+#slider-b1,#slider-b2,#slider-b3,#slider-b4,#slider-b5,#slider-b6 {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+}
+.b-container-1 {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.brand-box1 {
+  width: 240px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.brand-box-img {
+  height: 60%;
+  width: 100%;
+}
+.brand-box-img img {
+ object-fit: cover;
+ width: 100%;
+ height: 100%;
+}
+.brand-box-logo {
+  width: 75px;
+  height: 35px;
+}
+.brand-box-logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.brand-title {
+  color: rgb(77, 75, 75);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.brand-offer {
+  color: black;
+  font-size: 1.02rem;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+
+
